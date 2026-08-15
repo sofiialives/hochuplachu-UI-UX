@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ХочуПлачу! × Доработка сайта по задачам</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Raleway:wght@800;900&family=Syncopate:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <div class="starfield" aria-hidden="true">
+    <div class="star-layer star-layer--small"></div>
+    <div class="star-layer star-layer--medium"></div>
+    <div class="star-layer star-layer--colored"></div>
+    <span class="accent-star accent-star--blue" style="width:3px;height:3px;top:12%;left:18%"></span>
+    <span class="accent-star accent-star--purple" style="width:4px;height:4px;top:24%;left:72%;animation-delay:-0.8s"></span>
+    <span class="accent-star accent-star--blue" style="width:3px;height:3px;top:38%;left:44%;animation-delay:-2s"></span>
+    <span class="accent-star accent-star--purple" style="width:3px;height:3px;top:55%;left:9%;animation-delay:-1.4s"></span>
+    <span class="accent-star accent-star--blue" style="width:4px;height:4px;top:68%;left:82%;animation-delay:-2.6s"></span>
+    <span class="accent-star accent-star--purple" style="width:3px;height:3px;top:81%;left:29%;animation-delay:-0.4s"></span>
+    <span class="accent-star accent-star--blue" style="width:3px;height:3px;top:92%;left:61%;animation-delay:-1.8s"></span>
+  </div>
+
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-blob ambient-blob--1"></div>
+    <div class="ambient-blob ambient-blob--2"></div>
+    <div class="ambient-blob ambient-blob--3"></div>
+    <div class="ambient-blob ambient-blob--4"></div>
+  </div>
+
+  <div class="page">
+
+    <header class="header">
+      <div class="container header__inner">
+        <img src="./images/kometa.png" alt="KOMETA logo" class="header__brand-logo">
+        <div class="header__label">Доработка сайта · По задачам · 2026</div>
+        <div class="header__client">
+          <img src="./images/catcard-logo.svg" alt="ХочуПлачу!" class="header__client-logo-mark">
+          <span class="header__client-name">ХОЧУПЛАЧУ!</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__orb hero__orb--blue" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--purple" aria-hidden="true"></div>
+      <div class="particles" aria-hidden="true" id="particles"></div>
+
+      <div class="container hero__content">
+        <div class="reveal" data-delay="0">
+          <div class="pill"><span class="pill__dot"></span>ХочуПлачу! × Сайт</div>
+        </div>
+
+        <h1 class="hero__title reveal" data-delay="80">ХОЧУПЛАЧУ!</h1>
+        <h1 class="hero__title hero__title--gradient reveal" data-delay="140" style="font-size:clamp(24px,3.6vw,42px);letter-spacing:0.01em;line-height:1.3;max-width:820px;margin:0 auto;">Доработка сайта по задачам</h1>
+
+        <div class="hero__divider reveal" data-delay="160">
+          <span class="hero__divider-line"></span>
+          <span class="glow-dot glow-dot--blue" style="--size:5px"></span>
+          <span class="hero__x">×</span>
+          <span class="glow-dot glow-dot--purple" style="--size:5px"></span>
+          <span class="hero__divider-line hero__divider-line--right"></span>
+        </div>
+
+        <h1 class="hero__title reveal" data-delay="160" style="font-size:clamp(22px,3vw,34px);letter-spacing:0.02em;">КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ</h1>
+
+        <p class="hero__text reveal" data-delay="260">
+          Не под ключ: восемь пакетов, у каждого своя цена. Берёте только нужное. SEO вынесено в отдельное предложение, здесь только сайт
+        </p>
+
+        <div class="hero-facts reveal" data-delay="320">
+          <div class="hero-facts__item">
+            <div class="hero-facts__num">8</div>
+            <div class="hero-facts__label">пакетов на выбор</div>
+          </div>
+          <div class="hero-facts__item">
+            <div class="hero-facts__num">145</div>
+            <div class="hero-facts__label">страниц сайта в работе</div>
+          </div>
+          <div class="hero-facts__item">
+            <div class="hero-facts__num">0</div>
+            <div class="hero-facts__label">JS и серверного рендера</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider divider--abs-bottom"></div>
+    </section>
+
+    <!-- ============ РАМКИ: ЧТО МЫ УЧЛИ ============ -->
+    <section class="section">
+      <div class="bg-word" style="left:50%;transform:translate(-50%,-50%)">RULES</div>
+      <div class="divider"></div>
+      <div class="container section__pad-top">
+        <div class="reveal" data-delay="0" style="margin-bottom:40px">
+          <div class="pill"><span class="pill__dot"></span>Рамки</div>
+          <h2 class="h2" style="margin-top:24px;max-width:720px">Что мы учли из вашего ответа</h2>
+        </div>
+        <div class="grid-2 reveal" data-delay="30">
+          <div class="trust-card glass">
+            <div class="trust-card__glow"></div>
+            <div class="trust-card__head"><span class="check-badge">✓</span></div>
+            <h3 class="trust-card__title">Стек не трогаем</h3>
+            <p class="trust-card__desc">Astro + Keystatic, статьи в MDX, на выходе чистая статика на nginx. Никакого переезда и никакого сервера.</p>
+          </div>
+          <div class="trust-card glass">
+            <div class="trust-card__glow"></div>
+            <div class="trust-card__head"><span class="check-badge">✓</span></div>
+            <h3 class="trust-card__title">Работаем в вашей репе</h3>
+            <p class="trust-card__desc">Вы открываете доступ, мы вносим изменения пулл-реквестами. Каждый мержите сами, контроль остаётся у вас.</p>
+          </div>
+          <div class="trust-card glass">
+            <div class="trust-card__glow"></div>
+            <div class="trust-card__head"><span class="check-badge">✓</span></div>
+            <h3 class="trust-card__title">Без JS и тяжёлых анимаций</h3>
+            <p class="trust-card__desc">Всё оформление и движение только на CSS. Ни байта скриптов в продакшене, скорость загрузки не страдает.</p>
+          </div>
+          <div class="trust-card glass">
+            <div class="trust-card__glow"></div>
+            <div class="trust-card__head"><span class="check-badge">✓</span></div>
+            <h3 class="trust-card__title">Восприятие как у Duolingo</h3>
+            <p class="trust-card__desc">Легко и дружелюбно, без перегруза. Контент первичен, оформление помогает читать, а не отвлекает.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПАКЕТ 01: СЕМАНТИКА ============ -->
+    <!-- ЯН: цены черновые, калиброваны под объём 145 страниц / ~12 шаблонов. Правь в .pkg-price и data-price -->
+    <section class="section" id="packages">
+      <div class="bg-word" style="left:-3%;transform:translate(0,-50%)">CODE</div>
+      <div class="divider"></div>
+      <div class="container section__pad-top">
+        <div class="pkg-head reveal" data-delay="0">
+          <div>
+            <div class="cluster-marker">
+              <span class="cluster-marker__icon"><img src="./images/icon-cleanup.png" alt=""></span>
+              <span class="cluster-marker__count">ПАКЕТ 1 ИЗ 8 · ФИКСЫ</span>
+            </div>
+            <h2 class="cluster-big-title">Семантика и чистка вёрстки</h2>
+          </div>
+          <label class="pkg-pick glass">
+            <input type="checkbox" class="pkg__input" data-price="650" data-id="1">
+            <span class="pkg-price">$650</span>
+            <span class="pkg-toggle"><span class="pkg-toggle__off">+ в набор</span><span class="pkg-toggle__on">✓ в наборе</span></span>
+          </label>
+        </div>
+
+        <div class="audit-list reveal" data-delay="40">
+          <div class="audit-row">
+            <div class="audit-row__stat">
+              <span class="audit-row__num">152</span>
+              <span class="audit-row__unit">ошибки валидатора на блоге</span>
+            </div>
+            <div class="audit-row__body">
+              <h3 class="audit-row__title">Валидные шаблоны</h3>
+              <p class="audit-row__desc">Чистим ошибки W3C-валидатора по всем типам страниц, начиная с блога.</p>
+            </div>
+          </div>
+          <div class="audit-row">
+            <div class="audit-row__stat">
+              <span class="audit-row__num">H1</span>
+              <span class="audit-row__unit">и далее по порядку</span>
+            </div>
+            <div class="audit-row__body">
+              <h3 class="audit-row__title">Иерархия заголовков</h3>
+              <p class="audit-row__desc">Один H1 на страницу, уровни без пропусков, на каждом типе шаблона.</p>
+            </div>
+          </div>
+          <div class="audit-row">
+            <div class="audit-row__stat">
+              <span class="audit-row__num">12</span>
+              <span class="audit-row__unit">типов шаблонов на сайте</span>
+            </div>
+            <div class="audit-row__body">
+              <h3 class="audit-row__title">Семантические теги</h3>
+              <p class="audit-row__desc">header, nav, main, article вместо безликих div. Правим Astro-компоненты, статьи в MDX не трогаем.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-callout reveal" data-delay="60">
+          <span class="why-callout__label">Зачем</span>
+          <p class="why-callout__text">Робот читает структуру страницы, а не дизайн. Чистая семантика: база, в которую упираются SEO, доступность и превью. Цена учитывает объём: 145 страниц собираются из двенадцати шаблонов, правим каждый шаблон и проверяем каждый тип руками.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПАКЕТ 02: КРОССБРАУЗЕРНОСТЬ И АДАПТИВ ============ -->
+    <section class="section">
+      <div class="bg-word" style="left:50%;transform:translate(-50%,-50%)">SCREENS</div>
+      <div class="divider"></div>
+      <div class="container section__pad-top">
+        <div class="pkg-head reveal" data-delay="0">
+          <div>
+            <div class="cluster-marker">
+              <span class="cluster-marker__icon"><img src="./images/icon-pages-split.png" alt=""></span>
+              <span class="cluster-marker__count">ПАКЕТ 2 ИЗ 8 · ФИКСЫ</span>
+            </div>
+            <h2 class="cluster-big-title">Кроссбраузерность и адаптив</h2>
+          </div>
+          <label class="pkg-pick glass">
+            <input type="checkbox" class="pkg__input" data-price="550" data-id="2">
+            <span class="pkg-price">$550</span>
+            <span class="pkg-toggle"><span class="pkg-toggle__off">+ в набор</span><span class="pkg-toggle__on">✓ в наборе</span></span>
+          </label>
+        </div>
+
+        <div class="grid-2 reveal" data-delay="40">
+          <div class="reach-card glass">
+            <h3 class="reach-card__title">Браузеры</h3>
+            <div class="reach-card__chips">
+              <span class="tag">Chrome</span><span class="tag">Safari</span><span class="tag">Firefox</span><span class="tag">Edge</span><span class="tag">iOS Safari</span><span class="tag">Android</span>
+            </div>
+            <p class="reach-card__desc">Один вид везде. Особое внимание Safari: он чаще всего ломает вёрстку, а на iPhone сидит платящая аудитория.</p>
+          </div>
+          <div class="reach-card glass">
+            <h3 class="reach-card__title">Экраны</h3>
+            <div class="reach-card__stat"><span class="reach-card__num">320</span><span class="reach-card__unit">px и шире: от старых айфонов до 4K</span></div>
+            <p class="reach-card__desc">Адаптивные стили по брейкпоинтам, проверка на реальных устройствах, а не только в эмуляторе.</p>
+          </div>
+          <div class="reach-card glass" style="grid-column:1/-1">
+            <h3 class="reach-card__title">Критичные места</h3>
+            <div class="funnel-flow" style="margin-bottom:12px">
+              <span>Меню</span><span class="funnel-flow__arrow">·</span><span>Таблица тарифов</span><span class="funnel-flow__arrow">·</span><span>Каталог «где платить»</span><span class="funnel-flow__arrow">·</span><span class="funnel-flow__highlight">Кнопка «Выпустить карту»</span>
+            </div>
+            <p class="reach-card__desc">Проходим путь до выпуска карты на каждом устройстве: именно на нём сайт зарабатывает.</p>
+          </div>
+        </div>
+
+        <div class="why-callout reveal" data-delay="60">
+          <span class="why-callout__label">Зачем</span>
+          <p class="why-callout__text">Карту выпускают с телефона, и Google индексирует именно мобильную версию. Сломанная таблица тарифов в Safari равна потерянному выпуску карты, который никто не заметит без проверки.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПАКЕТ 03: СКОРОСТЬ ============ -->
+    <section class="section">
+      <div class="bg-word" style="left:-3%;transform:translate(0,-50%)">SPEED</div>
+      <div class="divider"></div>
+      <div class="container section__pad-top">
+        <div class="pkg-head reveal" data-delay="0">
+          <div>
+            <div class="cluster-marker">
+              <span class="cluster-marker__icon"><img src="./images/icon-speed-boost.png" alt=""></span>
+              <span class="cluster-marker__count">ПАКЕТ 3 ИЗ 8 · ФИКСЫ</span>
+            </div>
+            <h2 class="cluster-big-title">Скорость загрузки</h2>
+          </div>
+          <label class="pkg-pick glass">
+            <input type="checkbox" class="pkg__input" data-price="450" data-id="3">
+            <span class="pkg-price">$450</span>
+            <span class="pkg-toggle"><span class="pkg-toggle__off">+ в набор</span><span class="pkg-toggle__on">✓ в наборе</span></span>
+          </label>
+        </div>
+
+        <div class="audit-list reveal" data-delay="40">
+          <div class="audit-row">
+            <div class="audit-row__stat">
+              <span class="audit-row__num">12</span>
+              <span class="audit-row__unit">файлов шрифтов без приоритета</span>
+            </div>
+            <div class="audit-row__body">
+              <h3 class="audit-row__title">Шрифты</h3>
+              <p class="audit-row__desc">Приоритеты загрузки, предзагрузка критичных начертаний, отказ от лишних.</p>
+            </div>
+          </div>
+          <div class="audit-row">
+            <div class="audit-row__stat">
+              <span class="audit-row__num">AVIF</span>
+              <span class="audit-row__unit">и WebP вместо JPG</span>
+            </div>
+            <div class="audit-row__body">
+              <h3 class="audit-row__title">Картинки</h3>
+              <p class="audit-row__desc">Современные форматы, ленивая загрузка, правильные размеры под каждый экран.</p>
+            </div>
+          </div>
+          <div class="audit-row">
+            <div class="audit-row__stat">
+              <span class="audit-row__num">CWV</span>
+              <span class="audit-row__unit">Core Web Vitals в зелёной зоне</span>
+            </div>
+            <div class="audit-row__body">
+              <h3 class="audit-row__title">Показатели Google</h3>
+              <p class="audit-row__desc">Критический CSS, вес страниц, стабильность вёрстки при загрузке. Доводим три метрики до зелёного.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-callout reveal" data-delay="60">
+          <span class="why-callout__label">Зачем</span>
+          <p class="why-callout__text">Вы выбрали статику ради скорости. Доводим её до предела. Скорость входит в ранжирование и напрямую влияет на конверсию: каждая лишняя секунда загрузки теряет часть посетителей до первого экрана.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПАКЕТ 04: РАЗМЕТКА, ПРЕВЬЮ, ДОСТУПНОСТЬ ============ -->
+    <section class="section">
+      <div class="bg-word" style="left:50%;transform:translate(-50%,-50%)">MARKUP</div>
+      <div class="divider"></div>
+      <div class="container section__pad-top">
+        <div class="pkg-head reveal" data-delay="0">
+          <div>
+            <div class="cluster-marker">
+              <span class="cluster-marker__icon"><img src="./images/icon-favicon-og.png" alt=""></span>
+              <span class="cluster-marker__count">ПАКЕТ 4 ИЗ 8 · ФИКСЫ</span>
+            </div>
+            <h2 class="cluster-big-title">Разметка, превью и доступность</h2>
+          </div>
+          <label class="pkg-pick glass">
+            <input type="checkbox" class="pkg__input" data-price="450" data-id="4">
+            <span class="pkg-price">$450</span>
+            <span class="pkg-toggle"><span class="pkg-toggle__off">+ в набор</span><span class="pkg-toggle__on">✓ в наборе</span></span>
+          </label>
+        </div>
+
+        <div class="flip-table glass reveal" data-delay="40">
+          <div class="flip-row flip-row--head">
+            <div class="flip-row__before" style="text-decoration:none">Сейчас</div>
+            <div class="flip-row__arrow"></div>
+            <div class="flip-row__after" data-nocheck>Станет</div>
+          </div>
+          <div class="flip-row">
+            <div class="flip-row__before"><span class="flip-row__tag">Превью ссылок</span><span class="flip-strike">У 70 страниц картинка в SVG, в мессенджерах не показывается</span></div>
+            <div class="flip-row__arrow">→</div>
+            <div class="flip-row__after">Каждая ссылка в Telegram разворачивается с картинкой</div>
+          </div>
+          <div class="flip-row">
+            <div class="flip-row__before"><span class="flip-row__tag">Разметка schema.org</span><span class="flip-strike">Вопросы размечены на трёх страницах из 145, инструкции нигде</span></div>
+            <div class="flip-row__arrow">→</div>
+            <div class="flip-row__after">Организация, продукт, FAQ, инструкции и крошки по типам страниц</div>
+          </div>
+          <div class="flip-row">
+            <div class="flip-row__before"><span class="flip-row__tag">Доступность</span><span class="flip-strike">Атрибуты и контрасты не проверялись</span></div>
+            <div class="flip-row__arrow">→</div>
+            <div class="flip-row__after">Атрибуты aria, альтернативные подписи, читаемые контрасты</div>
+          </div>
+        </div>
+
+        <div class="why-callout reveal" data-delay="60">
+          <span class="why-callout__label">Зачем</span>
+          <p class="why-callout__text">Разметка даёт расширенный вид в выдаче: ссылка занимает больше места и собирает больше переходов. Превью решает кликабельность в Telegram, где живёт ваша аудитория. Доступность читает не только скринридер, но и поисковик.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПАКЕТ 05: UI-КИТ ============ -->
+    <section class="section">
+      <div class="bg-word" style="left:-3%;transform:translate(0,-50%)">UIKIT</div>
+      <div class="divider"></div>
+      <div class="container section__pad-top">
+        <div class="pkg-head reveal" data-delay="0">
+          <div>
+            <div class="cluster-marker">
+              <span class="cluster-marker__icon"><img src="./images/icon-heading-style.png" alt=""></span>
+              <span class="cluster-marker__count">ПАКЕТ 5 ИЗ 8 · ФИКСЫ</span>
+            </div>
+            <h2 class="cluster-big-title">UI-кит в вашей репе</h2>
+          </div>
+          <label class="pkg-pick glass">
+            <input type="checkbox" class="pkg__input" data-price="500" data-id="5">
+            <span class="pkg-price">$500</span>
+            <span class="pkg-toggle"><span class="pkg-toggle__off">+ в набор</span><span class="pkg-toggle__on">✓ в наборе</span></span>
+          </label>
+        </div>
+
+        <div class="grid-2 reveal" data-delay="40">
+          <div class="reach-card glass">
+            <h3 class="reach-card__title">Что внутри</h3>
+            <div class="reach-card__chips">
+              <span class="tag">карточки сервисов</span><span class="tag">кнопки</span><span class="tag">таблицы</span><span class="tag">FAQ</span><span class="tag">шаги</span><span class="tag">коллаутов</span>
+            </div>
+            <p class="reach-card__desc">Библиотека готовых Astro-компонентов в фирменном стиле, с документацией и примерами. Без единого скрипта.</p>
+          </div>
+          <div class="reach-card glass">
+            <h3 class="reach-card__title">Как работает</h3>
+            <div class="funnel-flow">
+              <span>Копирайтер</span><span class="funnel-flow__arrow">→</span><span>Keystatic</span><span class="funnel-flow__arrow">→</span><span class="funnel-flow__highlight">Готовая страница</span>
+            </div>
+            <p class="reach-card__desc">Новые страницы собираются из блоков без разработчика и автоматически получаются в стиле и с правильной семантикой.</p>
+          </div>
+        </div>
+
+        <div class="why-callout reveal" data-delay="60">
+          <span class="why-callout__label">Зачем</span>
+          <p class="why-callout__text">Это прямой ответ на вашу задачу «лёгкий путь для контентщиков». Кит окупается каждой новой страницей каталога и блога: их у вас появляется много, и каждая перестаёт требовать рук разработчика.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПАКЕТ 06: ГЛАВНАЯ ============ -->
+    <section class="section">
+      <div class="bg-word" style="left:50%;transform:translate(-50%,-50%)">HOME</div>
+      <div class="divider"></div>
+      <div class="container section__pad-top">
+        <div class="pkg-head reveal" data-delay="0">
+          <div>
+            <div class="cluster-marker">
+              <span class="cluster-marker__icon"><img src="./images/cluster-foundation.png" alt=""></span>
+              <span class="cluster-marker__count">ПАКЕТ 6 ИЗ 8 · ВИЗУАЛ</span>
+            </div>
+            <h2 class="cluster-big-title">Цепляющая главная</h2>
+          </div>
+          <label class="pkg-pick glass">
+            <input type="checkbox" class="pkg__input" data-price="800" data-id="6" data-bundle>
+            <span class="pkg-price">$800</span>
+            <span class="pkg-toggle"><span class="pkg-toggle__off">+ в набор</span><span class="pkg-toggle__on">✓ в наборе</span></span>
+          </label>
+        </div>
+
+        <div class="grid-2 reveal" data-delay="40">
+          <div class="reach-card glass">
+            <h3 class="reach-card__title">Что делаем</h3>
+            <p class="reach-card__desc" style="margin-top:0">Редизайн главной страницы в фирменном стиле ХочуПлачу. Все девять секций остаются на местах: hero, каталог, три карты, шаги, отзывы, блог, вопросы, призыв. Тексты не трогаем, меняется только вид. Всё на CSS, ни байта JS.</p>
+          </div>
+          <div class="reach-card glass">
+            <h3 class="reach-card__title">Почему главная первой</h3>
+            <p class="reach-card__desc" style="margin-top:0">Главная: точка входа из канала, бота и поиска. Первый экран решает, пойдёт ли человек выпускать карту. Сейчас страница выглядит шаблонной и не передаёт характер бренда, который у вас уже есть.</p>
+          </div>
+        </div>
+
+        <div class="why-callout reveal" data-delay="60">
+          <span class="why-callout__label">Зачем</span>
+          <p class="why-callout__text">Это ответ на ваш запрос «цепляющая главная и фиксы, без массовых изменений». Один шаблон, максимум эффекта: можно начать с главной и по её результату решать про остальной сайт.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПАКЕТ 07: РЕДИЗАЙН + ВСТАВКА ФИРСТИЛЯ ============ -->
+    <section class="section">
+      <div class="bg-word" style="left:-3%;transform:translate(0,-50%)">BRAND</div>
+      <div class="divider"></div>
+      <div class="container section__pad-top">
+        <div class="pkg-head reveal" data-delay="0">
+          <div>
+            <div class="cluster-marker">
+              <span class="cluster-marker__icon"><img src="./images/icon-image-alt.png" alt=""></span>
+              <span class="cluster-marker__count">ПАКЕТ 7 ИЗ 8 · ВИЗУАЛ</span>
+            </div>
+            <h2 class="cluster-big-title">Редизайн всего сайта</h2>
+          </div>
+          <label class="pkg-pick glass">
+            <input type="checkbox" class="pkg__input" data-price="1600" data-id="7" data-bundle>
+            <span class="pkg-price">$1600</span>
+            <span class="pkg-toggle"><span class="pkg-toggle__off">+ в набор</span><span class="pkg-toggle__on">✓ в наборе</span></span>
+          </label>
+        </div>
+
+        <!-- Вставка: фирменный стиль ХочуПлачу как образец -->
+        <div class="brand-preview reveal" data-delay="30">
+          <div class="brand-preview__label">Образец · фирменный стиль ХочуПлачу</div>
+          <div class="brand-preview__inner">
+            <div class="brand-preview__mascot">
+              <img src="./images/mascot.png" alt="Маскот ХочуПлачу!" loading="lazy">
+            </div>
+            <div class="brand-preview__body">
+              <div class="brand-preview__logo">ХОЧУ<svg class="hp-paw" viewBox="0 0 100 92" aria-hidden="true"><ellipse cx="22" cy="26" rx="12" ry="16" transform="rotate(-22 22 26)"/><ellipse cx="46" cy="14" rx="12" ry="16"/><ellipse cx="72" cy="22" rx="12" ry="16" transform="rotate(20 72 22)"/><path d="M50 40c-17 0-31 13-31 28 0 12 9 20 21 18 4-1 7-2 10-2s6 1 10 2c12 2 21-6 21-18 0-15-14-28-31-28z"/></svg><br>ПЛАЧУ!</div>
+              <div class="brand-preview__swatches">
+                <span class="swatch" style="background:#FFBA26"><i>#FFBA26</i></span>
+                <span class="swatch swatch--dark" style="background:#000000"><i>#000000</i></span>
+                <span class="swatch swatch--dark" style="background:#0E0E0E"><i>#0E0E0E</i></span>
+                <span class="swatch" style="background:#9C9C9C"><i>#9C9C9C</i></span>
+                <span class="swatch" style="background:#FFFFFF"><i>#FFFFFF</i></span>
+              </div>
+              <div class="brand-preview__fonts">
+                <span class="brand-preview__font brand-preview__font--syncopate">SYNCOPATE</span>
+                <span class="brand-preview__font brand-preview__font--raleway">Raleway</span>
+              </div>
+              <p class="brand-preview__note">Стиль уже сформирован: палитра, шрифты, маскот, лапка. Мы его не придумываем, а применяем к сайту.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2 reveal" data-delay="50">
+          <div class="reach-card glass">
+            <h3 class="reach-card__title">Что делаем</h3>
+            <div class="reach-card__chips">
+              <span class="tag">страницы карт</span><span class="tag">тарифы</span><span class="tag">каталог «где платить»</span><span class="tag">гайды</span><span class="tag">справка</span><span class="tag">блог</span><span class="tag">партнёрки</span>
+            </div>
+            <p class="reach-card__desc">Все двенадцать шаблонов переводим в фирменный стиль. Та же структура, тот же стек, никакого «ИИ-дизайна». Постранично через пулл-реквесты: сайт живёт, ничего не ломается разом.</p>
+          </div>
+          <div class="reach-card glass">
+            <h3 class="reach-card__title">Почему это нужно</h3>
+            <div class="funnel-flow" style="margin-bottom:12px">
+              <span>Канал ✓</span><span class="funnel-flow__arrow">·</span><span>Бот ✓</span><span class="funnel-flow__arrow">·</span><span>Гайды ✓</span><span class="funnel-flow__arrow">·</span><span class="funnel-flow__highlight">Сайт ✗</span>
+            </div>
+            <p class="reach-card__desc">Человек приходит из канала или бота и попадает на сайт, который выглядит чужим. Сайт остался последней точкой касания не в стиле.</p>
+          </div>
+        </div>
+
+        <div class="why-callout reveal" data-delay="70">
+          <span class="why-callout__label">Зачем</span>
+          <p class="why-callout__text">Для платёжного сервиса единая айдентика во всех точках касания работает на доверие, а доверие здесь конвертируется в выпуск карты. Цена учитывает объём: каталог на 42 сервиса, гайды, справка и блог, всего 145 страниц через 12 шаблонов.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПАКЕТ 08: АНИМАЦИЯ ============ -->
+    <section class="section">
+      <div class="bg-word" style="left:50%;transform:translate(-50%,-50%)">MOTION</div>
+      <div class="divider"></div>
+      <div class="container section__pad-top">
+        <div class="pkg-head reveal" data-delay="0">
+          <div>
+            <div class="cluster-marker">
+              <span class="cluster-marker__icon"><img src="./images/cluster-reach.png" alt=""></span>
+              <span class="cluster-marker__count">ПАКЕТ 8 ИЗ 8 · ВИЗУАЛ</span>
+            </div>
+            <h2 class="cluster-big-title">Фирменная анимация</h2>
+          </div>
+          <label class="pkg-pick glass">
+            <input type="checkbox" class="pkg__input" data-price="450" data-id="8" data-bundle>
+            <span class="pkg-price">$450</span>
+            <span class="pkg-toggle"><span class="pkg-toggle__off">+ в набор</span><span class="pkg-toggle__on">✓ в наборе</span></span>
+          </label>
+        </div>
+
+        <div class="grid-2 reveal" data-delay="40">
+          <div class="reach-card glass">
+            <h3 class="reach-card__title">Что делаем</h3>
+            <p class="reach-card__desc" style="margin-top:0">Вау-эффект первого экрана: маскот и лапки оживают, элементы мягко появляются при скролле. Всё на чистом CSS, включая анимации по скроллу: браузеры умеют это без единого скрипта.</p>
+          </div>
+          <div class="reach-card glass">
+            <h3 class="reach-card__title">Что это не</h3>
+            <div class="reach-card__chips">
+              <span class="tag tag--no">✗ JS</span><span class="tag tag--no">✗ 3D-рендер</span><span class="tag tag--no">✗ видео-фоны</span><span class="tag tag--no">✗ перегруз</span>
+            </div>
+            <p class="reach-card__desc">Никакой тяжести из нашего портфолио. Лёгкое движение в духе Duolingo: живо, но контент остаётся главным.</p>
+          </div>
+        </div>
+
+        <div class="why-callout reveal" data-delay="60">
+          <span class="why-callout__label">Зачем</span>
+          <p class="why-callout__text">Запоминающийся первый экран без потери скорости. Анимация делает маскота частью впечатления от продукта, а не картинкой в углу, и статика при этом остаётся статикой.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ВАУ-ПАКЕТ ============ -->
+    <section class="section">
+      <div class="bg-word" style="left:-3%;transform:translate(0,-50%)">BUNDLE</div>
+      <div class="divider"></div>
+      <div class="container section__pad-top">
+        <div class="reveal" data-delay="0" style="margin-bottom:40px">
+          <div class="pill"><span class="pill__dot"></span>Выгодно вместе</div>
+          <h2 class="h2" style="margin-top:24px;max-width:680px">Вау-пакет</h2>
+        </div>
+        <div class="price-wrap reveal" data-delay="30">
+          <div class="pricing-card pricing-card--highlight glass">
+            <div class="pricing-card__badge">−$350</div>
+            <div class="pricing-card__desc" style="margin-bottom:12px">Главная + редизайн сайта + анимация</div>
+            <div class="pricing-card__price">
+              <span class="bundle-old">$2850</span>
+              <span class="pricing-card__amount">$2500</span>
+            </div>
+            <div class="pricing-card__sep pricing-card__sep--highlight"></div>
+            <div class="pricing-card__features">
+              <div class="pricing-card__feature"><span class="pricing-card__check pricing-card__check--highlight">✓</span>Пакеты 6, 7 и 8 одним заходом</div>
+              <div class="pricing-card__feature"><span class="pricing-card__check pricing-card__check--highlight">✓</span>Сайт становится частью бренда</div>
+              <div class="pricing-card__feature"><span class="pricing-card__check pricing-card__check--highlight">✓</span>Та же структура и тот же стек</div>
+              <div class="pricing-card__feature"><span class="pricing-card__check pricing-card__check--highlight">✓</span>Скидка в наборе считается сама</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="divider"></div>
+      <div class="bg-word" style="left:50%;transform:translate(-50%,-50%)">KOMETA</div>
+      <div class="container section__pad-top footer__inner">
+        <div class="reveal" data-delay="0">
+          <div class="footer__brand">
+            <div class="footer__brand-name">KOMETA</div>
+            <div class="footer__brand-sub">WEB3 AGENCY</div>
+          </div>
+          <div class="mono-caption" style="margin-bottom:20px">Готовы обсудить</div>
+          <h2 class="footer__title">Соберите набор, обсудим сроки</h2>
+          <p class="footer__text">Каждый пакет: отдельная задача, отдельная цена. Начать можно с одного.</p>
+        </div>
+
+        <div class="footer__bottom reveal" data-delay="200">
+          <div class="mono-caption">© 2026 KOMETA · WEB3 AGENCY</div>
+          <div class="footer__bottom-mid">ХОЧУПЛАЧУ! × ДОРАБОТКА САЙТА · 2026</div>
+          <div class="mono-caption">KOMETA.WEB3</div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Плавающий итог набора -->
+  <div class="cart" id="cart" hidden>
+    <span class="cart__label">Ваш набор:</span>
+    <span class="cart__count" id="cartCount">0</span>
+    <span class="cart__sep"></span>
+    <span class="cart__total" id="cartTotal">$0</span>
+    <span class="cart__bundle" id="cartBundle" hidden>вау-пакет −$350 ✓</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
