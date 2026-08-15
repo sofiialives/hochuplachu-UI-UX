@@ -59,8 +59,8 @@
   }
 
   /* ---- 3. Калькулятор набора ----
-     Пакеты 6+7+8 вместе считаются как вау-пакет за $2500 вместо $2850 */
-  var BUNDLE_PRICE = 2500;
+     Пакеты 4+5 вместе считаются как вау-пакет за $1990 вместо $2850 */
+  var BUNDLE_PRICE = 1990;
   function initCart() {
     var inputs = document.querySelectorAll('.pkg__input');
     var cart = document.getElementById('cart');
@@ -69,10 +69,20 @@
     var bundleEl = document.getElementById('cartBundle');
     if (!inputs.length || !cart) return;
 
+    var byId = {};
+    inputs.forEach(function (i) {
+      var id = i.getAttribute('data-id');
+      (byId[id] = byId[id] || []).push(i);
+    });
+
     function update() {
-      var checked = Array.prototype.filter.call(inputs, function (i) { return i.checked; });
+      var checked = [];
+      Object.keys(byId).forEach(function (id) {
+        if (byId[id][0].checked) checked.push(byId[id][0]);
+      });
+
       var bundleItems = checked.filter(function (i) { return i.hasAttribute('data-bundle'); });
-      var isBundle = bundleItems.length === 3;
+      var isBundle = bundleItems.length === 2;
       var total = 0;
       checked.forEach(function (i) {
         if (isBundle && i.hasAttribute('data-bundle')) return;
@@ -86,7 +96,14 @@
       cart.hidden = checked.length === 0;
     }
 
-    inputs.forEach(function (i) { i.addEventListener('change', update); });
+    function onChange(e) {
+      // зеркалим состояние на все чекбоксы с тем же data-id (смета + секция пакета)
+      var group = byId[e.target.getAttribute('data-id')] || [];
+      group.forEach(function (i) { i.checked = e.target.checked; });
+      update();
+    }
+
+    inputs.forEach(function (i) { i.addEventListener('change', onChange); });
     update();
   }
 
